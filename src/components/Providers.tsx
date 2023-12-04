@@ -39,7 +39,7 @@ const Providers: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <ReduxProvider store={store}>
-      <GoogleOAuthProvider clientId="665297052167-9r4s6qdmkdj5f4adbmicm3utacj5hdt6.apps.googleusercontent.com">
+      <GoogleOAuthProvider clientId={process.env.GOOGLE_CLIENT_ID}>
         {children}
       </GoogleOAuthProvider>
     </ReduxProvider>
