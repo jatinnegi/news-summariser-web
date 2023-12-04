@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 import connectMongoDB from "@/libs/mongodb";
 import Article from "@/models/Article.model";
 
+export async function OPTIONS(_: Request) {
+  return NextResponse.json({}, { status: 200 });
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
