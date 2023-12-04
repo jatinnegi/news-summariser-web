@@ -60,7 +60,8 @@ export async function POST(request: Request) {
       messages: [
         {
           role: "user",
-          content: `Summarise the following text \"${content}\"`,
+          // content: `Summarise the following text \"${content}\"`,
+          content: `Generate a brief summary of the bias if any in the following text \"${content}\"`,
         },
       ],
     });
